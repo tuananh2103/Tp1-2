@@ -18,12 +18,12 @@ public class Point2D {
         this.x = point.x;
         this.y = point.y;
     }
+
     // Méthode equals pour comparer deux points
     public boolean equals(Point2D other) {
         if (this == other) {
             return true; // Si les deux objets sont identiques
         }
-        // Vérifie si les coordonnées x et y sont égales
         return this.x == other.x && this.y == other.y;
     }
 
@@ -32,7 +32,12 @@ public class Point2D {
     public String toString() {
         return "(" + x + ", " + y + ")";
     }
-    
+
+    // Methode distance
+    public Double distance(Point2D point) {
+        return Math.sqrt(Math.pow(point.x - this.x, 2) + Math.pow(point.y - this.y, 2));
+    }
+
     public double getX() {
         return x;
     }
